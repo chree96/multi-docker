@@ -13,12 +13,12 @@ jobs:
       - run: docker build -t chree96/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true chree96/react-test npm test
 
-      - run: docker build -t rallycoding/multi-client ./client
-      - run: docker build -t rallycoding/multi-nginx ./nginx
-      - run: docker build -t rallycoding/multi-server ./server
-      - run: docker build -t rallycoding/multi-worker ./worker
+      - run: docker build -t chree96/multi-client ./client
+      - run: docker build -t chree96/multi-nginx ./nginx
+      - run: docker build -t chree96/multi-server ./server
+      - run: docker build -t chree96/multi-worker ./worker
 
-      - run: docker push rallycoding/multi-client
-      - run: docker push rallycoding/multi-nginx
-      - run: docker push rallycoding/multi-server
-      - run: docker push rallycoding/multi-worker
+      - run: docker push chree96/multi-client
+      - run: docker push chree96/multi-nginx
+      - run: docker push chree96/multi-server
+      - run: docker push chree96/multi-worker
