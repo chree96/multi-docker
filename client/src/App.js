@@ -11,7 +11,7 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit diooo <code>src/App.js</code> and save to reload.
+            Edit again, funzionerà?? diooo <code>src/App.js</code> and save to reload.
           </p>
           <a
             className="App-link"
@@ -25,7 +25,7 @@ function App() {
           <Link to="otherpage">Other Page</Link>
         </header>
 
-        <div style={{height: 500, width: '100'}}>
+        <div style={{ height: 500, width: '100' }}>
           <Route exact path="/" component={Fib} />
           <Route path="/otherpage" component={OtherPage} />
         </div>
