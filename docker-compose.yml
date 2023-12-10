@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: "chree96/multi-client-10-14"
+    image: "chree96/multi-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: "chree96/multi-server-10-14"
+    image: "chree96/multi-server"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "chree96/multi-worker-10-14"
+    image: "chree96/multi-worker"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "chree96/multi-nginx-10-14"
+    image: "chree96/multi-nginx"
     mem_limit: 128m
     hostname: nginx
     ports:
